@@ -1,0 +1,226 @@
+/* ==========================================
+   PAGE 8
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+overflow:auto;
+}
+
+/* Background */
+
+#background{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+#stars,
+#hearts,
+#flowers{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+/* Main */
+
+.container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* Glass Card */
+
+.glass{
+
+width:95%;
+max-width:450px;
+
+padding:25px;
+
+text-align:center;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+border-radius:25px;
+
+box-shadow:
+0 0 25px rgba(255,255,255,.15),
+0 0 40px rgba(255,20,147,.25);
+
+}
+
+/* Title */
+
+#title{
+
+font-size:30px;
+
+margin-bottom:10px;
+
+color:white;
+
+text-shadow:
+0 0 10px hotpink,
+0 0 25px deeppink;
+
+}
+
+/* Subtitle */
+
+#subtitle{
+
+color:#dddddd;
+
+margin-bottom:18px;
+
+}
+
+/* Counter */
+
+#counter{
+
+font-size:18px;
+
+font-weight:bold;
+
+color:#ff80c0;
+
+margin-bottom:20px;
+
+}
+
+/* Balloon Area */
+
+#balloonArea{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:15px;
+
+justify-items:center;
+
+min-height:330px;
+
+}
+
+/* Balloon */
+
+.balloon{
+
+font-size:48px;
+
+cursor:pointer;
+
+transition:.3s;
+
+animation:float 2s ease-in-out infinite;
+
+user-select:none;
+
+}
+
+.balloon:hover{
+
+transform:scale(1.12);
+
+}
+
+/* Float */
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* Continue Button */
+
+#nextPage{
+
+margin-top:20px;
+
+padding:14px 32px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(45deg,#ff1493,#ff69b4);
+
+color:white;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+box-shadow:0 0 20px hotpink;
+
+transition:.4s;
+
+}
+
+#nextPage:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+0 0 25px hotpink,
+0 0 45px deeppink;
+
+}
+
+/* Stars */
+
+.star{
+
+position:absolute;
+
+color:white;
+
+animation:twinkle 2s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%{opacity:.2;}
+50%{opacity:1;}
+100%{opacity:.2;}
+
+}

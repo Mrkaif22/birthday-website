@@ -1,0 +1,454 @@
+/* ===========================================
+   HAPPY BIRTHDAY WEBSITE
+   PAGE 1
+   PART 2
+=========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#000;
+
+font-family:'Poppins',sans-serif;
+
+overflow:hidden;
+
+height:100vh;
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+/* ==============================
+   BACKGROUND
+============================== */
+
+#background{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+z-index:1;
+
+background:
+
+radial-gradient(circle at top,#141414,#000);
+
+}
+
+/* ==============================
+   ANIMATION LAYERS
+============================== */
+
+#stars,
+#flowers,
+#hearts,
+#sparkles{
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+/* ==============================
+   MAIN CONTAINER
+============================== */
+
+.container{
+
+position:relative;
+
+z-index:20;
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+}
+
+/* ==============================
+   GLASS CARD
+============================== */
+
+.glass{
+
+width:380px;
+
+max-width:95%;
+
+background:
+
+rgba(255,255,255,.06);
+
+backdrop-filter:blur(18px);
+
+border:
+
+1px solid rgba(255,255,255,.18);
+
+border-radius:30px;
+
+padding:35px;
+
+text-align:center;
+
+box-shadow:
+
+0 0 40px rgba(255,20,147,.35);
+
+animation:
+
+fadeUp 1.5s ease;
+
+}
+
+/* ==============================
+   HEART
+============================== */
+
+.heart-area{
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:20px;
+
+}
+
+.main-heart{
+
+font-size:90px;
+
+animation:
+
+heartBeat 1.2s infinite;
+
+filter:
+
+drop-shadow(0 0 20px #ff0066);
+
+}
+
+/* ==============================
+   TITLE
+============================== */
+
+.title{
+
+font-size:42px;
+
+font-weight:700;
+
+color:#ffffff;
+
+line-height:1.2;
+
+text-shadow:
+
+0 0 8px #ff0080,
+
+0 0 15px #ff0080,
+
+0 0 30px #ff0080;
+
+margin-bottom:12px;
+
+}
+
+/* ==============================
+   SUB TITLE
+============================== */
+
+.subtitle{
+
+font-size:16px;
+
+color:#f3f3f3;
+
+margin-bottom:28px;
+
+opacity:.9;
+
+}/* ===========================================
+   PAGE 1 - PART 3
+===========================================*/
+
+/* PASSWORD BOX */
+
+.password-box{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+margin-top:15px;
+
+}
+
+.password-box input{
+
+width:100%;
+
+padding:15px 20px;
+
+border:none;
+
+outline:none;
+
+border-radius:15px;
+
+font-size:17px;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+border:2px solid rgba(255,20,147,.35);
+
+transition:.4s;
+
+}
+
+.password-box input::placeholder{
+
+color:#cccccc;
+
+}
+
+.password-box input:focus{
+
+border-color:#ff1493;
+
+box-shadow:
+
+0 0 20px #ff1493;
+
+}
+
+/* UNLOCK BUTTON */
+
+#unlockBtn{
+
+padding:15px;
+
+border:none;
+
+border-radius:15px;
+
+background:linear-gradient(45deg,#ff0066,#ff1493);
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:
+
+0 0 18px rgba(255,20,147,.45);
+
+}
+
+#unlockBtn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 0 30px #ff1493;
+
+}
+
+/* MESSAGE */
+
+#message{
+
+margin-top:10px;
+
+font-size:16px;
+
+font-weight:600;
+
+min-height:25px;
+
+}
+
+/* NEXT BUTTON */
+
+#nextButton{
+
+display:none;
+
+margin-top:25px;
+
+padding:16px;
+
+width:100%;
+
+border:none;
+
+border-radius:18px;
+
+background:linear-gradient(45deg,#00c853,#64dd17);
+
+color:white;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:
+
+0 0 20px rgba(0,255,120,.45);
+
+}
+
+#nextButton:hover{
+
+transform:scale(1.04);
+
+box-shadow:
+
+0 0 30px rgba(0,255,120,.8);
+
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes heartBeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+25%{
+
+transform:scale(1.08);
+
+}
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+75%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+.glass{
+
+padding:25px;
+
+}
+
+.title{
+
+font-size:34px;
+
+}
+
+.main-heart{
+
+font-size:75px;
+
+}
+
+.subtitle{
+
+font-size:15px;
+
+}
+
+}
